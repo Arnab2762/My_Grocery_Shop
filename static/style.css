@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 6px;
+}
+
+header p {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+}
+
+.add-item-section {
+  background: #fdfdfd;
+  border: 1px dashed #27ae60;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.add-item-section h3 {
+  font-size: 1rem;
+  color: #27ae60;
+  margin-bottom: 12px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-row input {
+  flex: 1;
+  min-width: 130px;
+  padding: 9px 12px;
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-row input:focus,
+.search-input:focus {
+  border-color: #27ae60;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1.5px solid #dcdde1;
+  border-radius: 8px;
+  outline: none;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+caption {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 12px;
+  color: #27ae60;
+}
+
+thead th {
+  background-color: #27ae60;
+  color: #ffffff;
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+thead th:first-child {
+  border-top-left-radius: 8px;
+}
+
+thead th:last-child {
+  border-top-right-radius: 8px;
+}
+
+tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #edf2f7;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+tbody tr:hover {
+  background-color: #f8faf9;
+}
+
+.price-col {
+  font-weight: 600;
+  color: #e67e22;
+}
+
+.badge-unit {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.actions-cell {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-add {
+  background-color: #27ae60;
+  color: #fff;
+  padding: 9px 18px;
+}
+
+.btn-edit {
+  background-color: #3498db;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.btn-save {
+  background-color: #2ecc71;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.btn-cancel {
+  background-color: #95a5a6;
+  color: #fff;
+}
+
+.edit-input {
+  width: 90%;
+  padding: 6px 10px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 650px) {
+  .container {
+    padding: 15px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .btn-add {
+    width: 100%;
+  }
+
+  tbody td,
+  thead th {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Quick calculator */
+.calc-section { background:#f0fff5; border:1px solid #b7e4c7; border-radius:10px; padding:18px 20px; margin-bottom:22px; }
+.calc-section h3 { color:#218c52; margin-bottom:12px; }
+.calc-section select, .calc-section input { flex:1; min-width:130px; padding:10px 12px; border:1px solid #dcdde1; border-radius:6px; font-size:.95rem; background:#fff; }
+.calc-result { margin-top:12px; padding:12px 14px; border-radius:7px; background:#fff; border-left:4px solid #27ae60; line-height:1.6; }
+.calc-result strong { color:#218c52; }
+@media (max-width:650px) { .calc-section .form-row { flex-direction:column; } .calc-section select, .calc-section input { width:100%; } }
