@@ -217,6 +217,217 @@ tbody tr:hover {
   }
 }
 
+/* ================================
+   MOBILE RESPONSIVE DESIGN
+================================ */
+
+html {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    min-width: 0;
+    padding: 20px;
+}
+
+input,
+select,
+button {
+    max-width: 100%;
+}
+
+button,
+select {
+    min-height: 42px;
+}
+
+/* Tablets and mobile phones */
+@media screen and (max-width: 600px) {
+
+    body {
+        display: block;
+        padding: 8px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px 12px;
+        border-radius: 10px;
+    }
+
+    header {
+        margin-bottom: 18px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .calc-section,
+    .add-item-section {
+        padding: 14px 12px;
+        margin-bottom: 16px;
+    }
+
+    /* Stack calculator fields vertically */
+    .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-row input,
+    .calc-section select,
+    .calc-section input,
+    .btn-add {
+        width: 100%;
+        min-width: 0;
+        min-height: 44px;
+        font-size: 16px;
+    }
+
+    /* Search bar */
+    .search-input {
+        width: 100%;
+        min-height: 44px;
+        font-size: 16px;
+    }
+
+    /* Make the grocery table easier to read */
+    .table-wrapper {
+        overflow: visible;
+    }
+
+    #itemsTable,
+    #itemsTable tbody,
+    #itemsTable tbody tr,
+    #itemsTable tbody td {
+        display: block;
+        width: 100%;
+    }
+
+    /* Hide the desktop table headings */
+    #itemsTable thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+    }
+
+    /* Display each grocery item as a card */
+    #itemsTable tbody tr {
+        margin-bottom: 12px;
+        padding: 8px 10px;
+        background: #ffffff;
+        border: 1px solid #e4eee7;
+        border-radius: 10px;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.05);
+    }
+
+    #itemsTable tbody td {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px 2px;
+        font-size: 14px;
+        overflow-wrap: anywhere;
+        border-bottom: 1px solid #edf2f7;
+    }
+
+    /* Labels for mobile grocery cards */
+    #itemsTable tbody td::before {
+        flex: 0 0 75px;
+        color: #65736a;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    #itemsTable tbody td:nth-child(1)::before {
+        content: "Item";
+    }
+
+    #itemsTable tbody td:nth-child(2)::before {
+        content: "Price";
+    }
+
+    #itemsTable tbody td:nth-child(3)::before {
+        content: "Unit";
+    }
+
+    /* Edit and delete buttons */
+    #itemsTable tbody td.actions-cell {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        border-bottom: none;
+        padding-top: 12px;
+    }
+
+    #itemsTable tbody td.actions-cell::before {
+        content: "Actions";
+        margin-right: auto;
+    }
+
+    .actions-cell .btn {
+        min-height: 40px;
+        padding: 8px 12px;
+        margin: 0 0 0 6px;
+    }
+
+    /* Inline editing fields */
+    .edit-input {
+        width: 100%;
+        min-width: 0;
+        font-size: 16px;
+    }
+
+    /* Calculator result */
+    .calc-result {
+        padding: 12px;
+        font-size: 14px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+}
+
+/* Extra-small phones */
+@media screen and (max-width: 360px) {
+
+    .container {
+        padding: 12px 9px;
+    }
+
+    #itemsTable tbody td::before {
+        flex-basis: 60px;
+    }
+
+    .actions-cell .btn {
+        padding: 7px 9px;
+        font-size: 12px;
+    }
+}
 /* Quick calculator */
 .calc-section { background:#f0fff5; border:1px solid #b7e4c7; border-radius:10px; padding:18px 20px; margin-bottom:22px; }
 .calc-section h3 { color:#218c52; margin-bottom:12px; }
